@@ -20,11 +20,10 @@ jobs:
           # Starts web server for E2E tests - replace with your own server invocation
           # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
           start: npm start
-          #wait-on: 'http://localhost:3000' # Waits for above
-          # Records to Cypress Cloud 
-          # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
-          spec:
-            cypress/e2e/SegundoDirectorio/test2.cy.js
+          wait-on: 'http://localhost:3000' # Waits for above
+          browser: chrome
+          config-file: cypress.json
+          record: true
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
           # in GitHub repo → Settings → Secrets → Actions
