@@ -22,7 +22,7 @@ jobs:
           start: npm start
           wait-on: 'http://localhost:3000' # Waits for above
           browser: chrome
-          config-file: cypress.json
+          testFiles: cypress/e2e/SegundoDirectorio/**
           record: true
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
